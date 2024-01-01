@@ -1,0 +1,110 @@
+<div class="sell">
+  <div class="search">
+    <p>مبيعات التذاكر</p>
+    <span class="p-input-icon-right ml-auto">
+      <i class="pi pi-search"></i>
+      <input pInputText type="text" placeholder="بحث عن" />
+    </span>
+    <button pButton class="image"><img src="../../assets/icons/filter.png" alt=""></button>
+    <button pButton class="image"><img src="../../assets/icons/arrow-3.png" alt=""></button>
+  </div>
+
+  <div class="new-ticket">
+    <div class="active-toggle" (click)="disactive()" *ngIf="toggle">
+      <span class="active"></span>
+    </div>
+    <div class="disactive-toggle" (click)="active()" *ngIf="!toggle">
+      <span class="disactive"></span>
+    </div>
+    <span class="activated" *ngIf="toggle">مفعلة</span>
+    <span class="activated" *ngIf="!toggle"> غير مفعلة </span>
+    <button pButton label="حجز تذكرة جديدة"></button>
+  </div>
+
+</div>
+
+<div class="table">
+  <p-table [value]="tickets" [tableStyle]="{ 'min-width': '1000px' }">
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th>#</th>
+        <th [width]="150">المستخدم</th>
+        <th [width]="100">رقم التذكرة</th>
+        <th [width]="130" pSortableColumn="price"> قيمة التذكرة <p-sortIcon field="price"></p-sortIcon>
+        </th>
+        <th>السينمات</th>
+        <th [width]="107">عدد الاشخاص</th>
+        <th [width]="118">عدد مرات الشراء</th>
+        <th [width]="200">التذكرة</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-tickets>
+
+      <tr>
+        <td id="n">{{tickets.id}}</td>
+        <td>
+          <div class="user">
+            <img src={{tickets.user.img}} alt="">
+            <div>
+              <p>{{tickets.user.name}}</p>
+              <span>{{tickets.user.phone}}</span>
+            </div>
+          </div>
+        </td>
+        <td>{{tickets.nTicket}}</td>
+        <td>{{tickets.price}}</td>
+        <td>{{tickets.cinema}}
+          <span pTooltip="صيدناوي مول العرب" tooltipPosition="top">...</span>
+        </td>
+        <td>{{tickets.n}}</td>
+        <td>{{tickets.nBuy}}</td>
+        <td>
+          <div class="ticket">
+            <div class="image"><img src={{tickets.ticket.tImg}} alt=""></div>
+            <div class="info">
+              <p>{{tickets.ticket.nt}}</p>
+              <span>{{tickets.ticket.size}}</span>
+            </div>
+            <img src={{tickets.ticket.dImg}} alt="">
+          </div>
+        </td>
+
+      </tr>
+
+
+
+
+    </ng-template>
+
+
+  </p-table>
+
+  <div class="paginator">
+
+    <div class="selection">
+      <span>عرض</span>
+      <select name="row" id="row">
+        <option value="20">20</option>
+        <option value="20">30</option>
+        <option value="20">40</option>
+      </select>
+      <span> من اصل 250</span>
+    </div>
+
+
+    <div class="pagination">
+      <img src="../../assets/icons/right.png" alt="">
+      <ul>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+      <img src="../../assets/icons/left.png" alt="">
+    </div>
+
+  </div>
+</div>

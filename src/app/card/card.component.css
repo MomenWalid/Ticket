@@ -1,0 +1,95 @@
+.card {
+  background-color: #8a74f9;
+  padding: 45px 15px;
+  position: relative;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.card .ticket {
+  text-align: center;
+}
+
+.card .ticket p {
+  font-weight: bold;
+}
+.card .ticket .copy {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 5px;
+}
+.card .ticket .copy button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.card .ticket p:last-child {
+  font-weight: normal;
+}
+
+.card .dashed {
+  display: block;
+  width: 100%;
+  border-bottom: 2px dashed;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card .dashed::before,
+.card .dashed::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #f3f5f7;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card .dashed::before {
+  right: -27px;
+}
+.card .dashed::after {
+  left: -27px;
+}
+
+.discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.discount p {
+  margin: 0;
+  text-align: right;
+}
+
+.discount .send {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.discount .share .icon {
+  padding: 5px;
+  border: 1px solid #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.del {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}

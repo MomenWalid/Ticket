@@ -1,0 +1,46 @@
+<div class="card">
+
+  <div class="ticket">
+    <p>
+      عرض التذكرة الخاصة بالفيلم
+    </p>
+
+    <p class="copy">
+      <button (click)="copy()"><img src="../../assets/icons/copy.png" alt=""></button>
+      <span> {{url}}</span>
+    </p>
+
+    <p>فعال حتي 15 يوليو 2023</p>
+  </div>
+
+
+  <span class="dashed"></span>
+
+  <div class="discount">
+    <div class="qr">
+      <qrcode [qrdata]="url" [width]="100" [errorCorrectionLevel]="'M'"></qrcode>
+    </div>
+
+
+    <div class="share">
+      <p>
+        خصم
+      </p>
+
+      <div class="send">
+        <p class="icon">
+          مشاركة
+          <img src="../../assets/icons/send-2.png" alt="">
+        </p>
+
+        <p>25%</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="del" pTooltip="حذف" tooltipPosition="bottom"><img src="../../assets/icons/trash.png" alt=""></div>
+
+</div>

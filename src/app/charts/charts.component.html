@@ -1,0 +1,26 @@
+<div class="chart">
+
+  <div class="info">
+    <div class="year">
+      <img src="../../assets/icons/Vector.png" alt="">
+      سنويا
+    </div>
+    <div>
+      <p>احصائيات إستخدام القسيمة</p>
+      <p>
+        05 يوليو , 2023 - 05 اغسطس , 2023
+        <img src="../../assets/icons/Vector.png" alt="">
+      </p>
+    </div>
+  </div>
+
+
+
+  <apx-chart [series]="chartOptions.series!" [chart]="chartOptions.chart!" [xaxis]="chartOptions.xaxis!"
+    [title]="chartOptions.title!" [dataLabels]="chartOptions.dataLabels!" [yaxis]="chartOptions.yaxis!"
+    [stroke]="chartOptions.stroke!" [fill]="chartOptions.fill!" [tooltip]="chartOptions.tooltip!">
+  </apx-chart>
+
+
+
+</div>

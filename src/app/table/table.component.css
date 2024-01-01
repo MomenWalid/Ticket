@@ -1,0 +1,239 @@
+.sell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  direction: rtl;
+  padding: 15px;
+}
+
+@media (max-width: 767px) {
+  .sell {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.sell .search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .sell .search {
+    flex-wrap: wrap;
+  }
+}
+.sell .search p {
+  margin: 0;
+  font-weight: 400;
+  color: #1c1c28;
+}
+.sell .search input {
+  width: 277px;
+}
+
+.sell .search .image {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.sell .search .image:hover,
+.sell .search .image:focus {
+  border: 1px solid #8a74f9;
+}
+
+.sell .new-ticket {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sell .new-ticket .active-toggle {
+  position: relative;
+  width: 34px;
+  height: 18px;
+  border-radius: 38px;
+  background-color: #8a74f9;
+  cursor: pointer;
+}
+
+.sell .new-ticket .active-toggle .active {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.sell .new-ticket .disactive-toggle {
+  position: relative;
+  width: 34px;
+  height: 18px;
+  border-radius: 38px;
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.sell .new-ticket .disactive-toggle .disactive {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.sell .new-ticket .activated {
+  font-size: 14px;
+  font-weight: 400;
+  color: #9c9d9f;
+}
+
+.sell button {
+  background-color: #8a74f9;
+  font-size: 14px;
+}
+
+.table {
+  direction: rtl;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.table th,
+.table td {
+  text-align: center;
+}
+
+.table th {
+  font-size: 13px;
+  color: #abaab1;
+}
+
+.table td {
+  font-size: 14px;
+  color: #1c1c28;
+}
+
+.table #n {
+  color: #898995;
+}
+
+.table .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table .user p {
+  margin: 0;
+  font-size: 14px;
+  color: #1c1c28;
+}
+
+.table .user span {
+  font-size: 12px;
+  color: #92a1ad;
+}
+
+.table .ticket {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table .ticket .image {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8a74f91a;
+}
+
+.table .ticket p {
+  margin: 0;
+  font-size: 12px;
+  color: #000;
+}
+.table .ticket span {
+  display: block;
+  text-align: right;
+  font-size: 10px;
+  color: #92a1ad;
+}
+
+.paginator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+@media (max-width: 767px) {
+  .paginator {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.paginator .selection {
+  color: #333;
+}
+.paginator .selection select {
+  border: 1px solid #ddd;
+  direction: ltr;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin: 0 10px;
+}
+
+.paginator .pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.paginator .pagination ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.paginator .pagination ul li {
+  padding: 10px;
+  margin: 5px;
+  color: #7e8299;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+.paginator .pagination ul li.active {
+  background-color: #8a74f9;
+  color: #fff;
+}
+
+.paginator .pagination ul li:hover {
+  background-color: #8a74f9a1;
+  color: #fff;
+}

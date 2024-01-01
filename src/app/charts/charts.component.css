@@ -1,0 +1,48 @@
+.chart {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .info {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
+
+.info p:first-of-type {
+  text-align: right;
+  font-size: 18px;
+  color: #1c1c28;
+  margin: 0;
+}
+
+.info p:last-child {
+  direction: rtl;
+  color: #92a1ad;
+}
+
+.info p:last-child img {
+  margin-right: 5px;
+  width: 10px;
+}
+
+.info .year {
+  border: 1px solid #e8e8e8;
+  width: 70px;
+  height: 40px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
